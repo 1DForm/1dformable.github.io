@@ -579,7 +579,6 @@ section {
     color: var(--blue);
 }
 
-
 /* Champ message même largeur */
 .full-width {
     width: 100%;
@@ -604,7 +603,6 @@ section {
     color: var(--blue);
 }
 
-
 /* Case à cocher */
 .rgpd-label input[type="checkbox"] {
     width: 20px;
@@ -618,7 +616,6 @@ section {
     display: block;
     font-size: 15px;
 }
-
 
 /* FOOTER */
 footer {
@@ -643,6 +640,16 @@ footer {
 
 .footer-inner a {
     color: var(--blue2);
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.footer-links a.active {
+    color: var(--orange);
+    font-weight: 700;
 }
 
 /* RESPONSIVE */
