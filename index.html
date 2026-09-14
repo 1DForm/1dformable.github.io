@@ -5,45 +5,81 @@
 <title>1DFormable – Formations Informatique & Techniques</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #1a1a1a;
-}
-header {
-    padding: 40px 20px;
-}
-h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-h2 {
-    font-size: 20px;
-    margin-top: 30px;
-}
-p {
-    font-size: 16px;
-    margin: 10px 0;
-}
-a.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: #1A73E8;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 16px;
-}
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    font-size: 14px;
-    color: #555;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        color: #333;
+    }
+    header {
+        background: linear-gradient(135deg, #1A73E8, #0049B7);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 42px;
+        margin: 0;
+        font-weight: 700;
+    }
+    header p {
+        font-size: 20px;
+        margin-top: 10px;
+        opacity: 0.9;
+    }
+    section {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #1A73E8;
+        text-align: center;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    ul li::before {
+        content: "✔ ";
+        color: #1A73E8;
+        font-weight: bold;
+    }
+    .cta {
+        display: block;
+        width: 260px;
+        margin: 30px auto;
+        padding: 15px 20px;
+        background: #1A73E8;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .cta:hover {
+        background: #0049B7;
+    }
+    footer {
+        text-align: center;
+        padding: 30px;
+        font-size: 16px;
+        color: #555;
+    }
+    footer a {
+        color: #1A73E8;
+        text-decoration: none;
+        font-weight: bold;
+    }
 </style>
 </head>
 <body>
@@ -53,19 +89,23 @@ footer {
     <p>Formations informatique, bureautique, électricité & techniques – 100 % à distance</p>
 </header>
 
-<h2>Formations proposées</h2>
-<p>• Informatique & systèmes</p>
-<p>• Bureautique (Word, Excel, PowerPoint)</p>
-<p>• Réseaux & sécurité</p>
-<p>• Électricité & basse tension</p>
-<p>• Vidéosurveillance, contrôle d’accès</p>
-<p>• BIM / FreeCAD</p>
+<section>
+    <h2>Formations proposées</h2>
+    <ul>
+        <li>Informatique & systèmes</li>
+        <li>Bureautique (Word, Excel, PowerPoint)</li>
+        <li>Réseaux & sécurité</li>
+        <li>Électricité & basse tension</li>
+        <li>Vidéosurveillance, contrôle d’accès</li>
+        <li>BIM / FreeCAD</li>
+    </ul>
 
-<a class="button" href="mailto:s.come@1dformable.fr">Me contacter</a>
+    <a class="cta" href="mailto:s.come@1dformable.fr">Me contacter</a>
+</section>
 
 <footer>
-    <p>Contact : s.come@1dformable.fr</p>
-    <p><a href="https://www.linkedin.com/company/1dformable" target="_blank">LinkedIn 1DFormable</a></p>
+    Contact : s.come@1dformable.fr<br>
+    <a href="https://www.linkedin.com/company/1dformable" target="_blank">LinkedIn 1DFormable</a>
 </footer>
 
 </body>
