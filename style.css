@@ -463,10 +463,45 @@ section {
     margin-bottom: 10px;
 }
 
-.module-desc {
+/* GRID / CARDS */
+.grid {
+    ...
+}
+
+.card {
+    ...
+}
+
+/* ⭐ MODULES (AJOUTE ICI) */
+.module-card {
+    border: 1px solid var(--border);
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    margin-bottom: 40px;
+}
+
+.module-card h3 {
+    margin-top: 0;
+    color: var(--navy);
+}
+
+.module-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.module-card ul li {
+    margin-bottom: 10px;
+}
+
+.module-card .module-desc {
     color: var(--muted);
     margin-bottom: 20px;
 }
+
 
 /* FOOTER */
 footer {
