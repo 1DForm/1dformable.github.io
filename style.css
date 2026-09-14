@@ -381,6 +381,17 @@ section {
     font-size: 14px;
 }
 
+/* APPROACH BUTTON */
+.approach-button {
+    text-align: center;
+    margin-top: 40px;   // descend le bouton
+}
+
+.approach-button .btn {
+    display: inline-flex;
+}
+
+
 /* CTA */
 .cta {
     padding: 70px 0;
@@ -487,12 +498,4 @@ footer {
     }
 }
 
-.approach-button {
-    text-align: center;
-    margin-top: 40px;   // descend le bouton
-}
-
-.approach-button .btn {
-    display: inline-flex;
-}
 
