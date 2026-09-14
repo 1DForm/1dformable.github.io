@@ -600,6 +600,11 @@ section {
     line-height: 1.4;
 }
 
+.rgpd-label:hover span {
+    color: var(--blue);
+}
+
+
 /* Case à cocher */
 .rgpd-label input[type="checkbox"] {
     width: 20px;
