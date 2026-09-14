@@ -642,16 +642,6 @@ footer {
     color: var(--blue2);
 }
 
-.footer-links a {
-    display: block;
-    margin-bottom: 6px;
-}
-
-.footer-links a.active {
-    color: var(--orange);
-    font-weight: 700;
-}
-
 /* RESPONSIVE */
 @media (max-width: 850px) {
     .nav-links a:not(.nav-cta) {
