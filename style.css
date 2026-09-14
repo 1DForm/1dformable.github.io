@@ -645,6 +645,7 @@ footer {
 .footer-links a {
     display: block;
     margin-bottom: 6px;
+    line-height: 1.4;
 }
 
 .footer-links a.active {
