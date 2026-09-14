@@ -32,6 +32,24 @@ a {
     color: inherit;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp .6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    transition: .3s ease;
+}
+
 /* NAVBAR */
 .navbar {
     position: sticky;
