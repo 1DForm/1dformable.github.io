@@ -472,7 +472,7 @@ section {
     ...
 }
 
-/* ⭐ MODULES (AJOUTE ICI) */
+/* MODULES */
 .module-card {
     border: 1px solid var(--border);
     background: var(--white);
@@ -535,6 +535,35 @@ section {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s ease;
+    user-select: none;
+}
+
+.chip:hover {
+    background: var(--blue2);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
+.chip input {
+    transform: scale(1.2);
 }
 
 /* FOOTER */
