@@ -439,6 +439,35 @@ section {
     color: #D7E7F7;
 }
 
+.modules .module {
+    margin-bottom: 60px;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+}
+
+.module h3 {
+    margin-top: 0;
+    color: var(--navy);
+}
+
+.module-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.module-list li {
+    margin-bottom: 10px;
+}
+
+.module-desc {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
 /* FOOTER */
 footer {
     background: #02152D;
