@@ -533,9 +533,10 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    margin-bottom: 20px;
 }
 
-/* Style des chips */
+/* Style des bulles */
 .chip {
     background: var(--white);
     border: 1px solid var(--border);
@@ -546,7 +547,7 @@ section {
     display: inline-block;
 }
 
-/* Alignement interne */
+/* Alignement interne parfait */
 .chip-inner {
     display: flex;
     align-items: center;
@@ -567,10 +568,16 @@ section {
     color: var(--text);
 }
 
-/* Effet hover */
+/* Hover */
 .chip:hover {
     border-color: var(--blue);
     box-shadow: 0 0 6px rgba(0,0,0,.08);
+}
+
+/* Optionnel : chip sélectionné */
+.chip input[type="checkbox"]:checked + span {
+    font-weight: 600;
+    color: var(--blue);
 }
 
 
