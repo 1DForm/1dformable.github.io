@@ -21,7 +21,7 @@
             <a href="formations.html">Formations</a>
             <a href="index.html#methode">Notre approche</a>
             <a href="ia.html">IA</a>
-            <a class="nav-cta" href="#formulaire">Demander un devis</a>
+            <a class="nav-cta" href="formulaire.html">Demander un devis / une formation</a>
         </div>
     </div>
 </nav>
@@ -33,7 +33,7 @@
     </div>
 </header>
 
-<section id="formulaire" class="form-section fade-in">
+<section class="modules">
     <div class="container">
 
         <div class="section-title">
@@ -42,15 +42,16 @@
             <p>Nous vous répondrons sous 24h.</p>
         </div>
 
-        <!-- ⭐ FORMULAIRE AVEC ENVOI AUTOMATIQUE PAR MAIL -->
-        <form class="form-card" action="https://formsubmit.co/contact@1dformable.fr" method="POST">
+        <!-- ⭐ FORMULAIRE PREMIUM -->
+        <form class="form-card fade-in" action="https://formsubmit.co/contact@1dformable.fr" method="POST">
 
             <!-- FormSubmit options -->
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_subject" value="Nouvelle demande de formation via 1DFormable">
+            <input type="hidden" name="_subject" value="Nouvelle demande via 1DFormable">
             <input type="hidden" name="_next" value="https://www.1dformable.fr/merci.html">
 
+            <!-- Identité -->
             <div class="form-group">
                 <label>Nom *</label>
                 <input type="text" name="Nom" required>
@@ -71,26 +72,74 @@
                 <input type="email" name="Email" required>
             </div>
 
+            <!-- Sujet -->
             <div class="form-group">
-                <label>Modules souhaités *</label>
-                <select name="Modules_souhaités[]" multiple required>
-                    <option>Informatique & systèmes</option>
-                    <option>Bureautique</option>
-                    <option>Réseaux & sécurité</option>
-                    <option>Électricité & basse tension</option>
-                    <option>Vidéosurveillance & contrôle d’accès</option>
-                    <option>BIM & FreeCAD</option>
-                    <option>IA générative</option>
+                <label>Sujet de la demande *</label>
+                <select name="Sujet" required>
+                    <option value="">Sélectionnez un sujet</option>
+                    <option>Demande de devis</option>
+                    <option>Demande de formation</option>
+                    <option>Renseignement sur un module</option>
+                    <option>Demande personnalisée</option>
                     <option>Autres</option>
                 </select>
-                <small>Maintenez CTRL (Windows) ou CMD (Mac) pour sélectionner plusieurs modules.</small>
             </div>
 
+            <!-- ⭐ Boutons bulles (chips) -->
             <div class="form-group">
-                <label>Sujet (optionnel)</label>
-                <input type="text" name="Sujet">
+                <label>Modules concernés *</label>
+                <div class="chips">
+
+                    <label class="chip">
+                        <input type="checkbox" name="Modules[]" value="Informatique & systèmes">
+                        Informatique & systèmes
+                    </label>
+
+                    <label class="chip">
+                        <input type="checkbox" name="Modules[]" value="Bureautique">
+                        Bureautique
+                    </label>
+
+                    <label class="chip">
+                        <input type="checkbox" name="Modules[]" value="Réseaux & sécurité">
+                        Réseaux & sécurité
+                    </label>
+
+                    <label class="chip">
+                        <input type="checkbox" name="Modules[]" value="Électricité & basse tension">
+                        Électricité & basse tension
+                    </label>
+
+                    <label class="chip">
+                        <input type="checkbox" name="Modules[]" value="Vidéosurveillance & contrôle d’accès">
+                        Vidéosurveillance & contrôle d’accès
+                    </label>
+
+                    <label class="chip">
+                        <input type="checkbox" name="Modules[]" value="BIM & FreeCAD">
+                        BIM & FreeCAD
+                    </label>
+
+                    <label class="chip">
+                        <input type="checkbox" name="Modules[]" value="IA générative">
+                        IA générative
+                    </label>
+
+                    <label class="chip">
+                        <input type="checkbox" name="Modules[]" value="Autres">
+                        Autres
+                    </label>
+
+                </div>
             </div>
 
+            <!-- Message -->
+            <div class="form-group">
+                <label>Message (optionnel)</label>
+                <textarea name="Message" rows="5" placeholder="Décrivez votre besoin si nécessaire..."></textarea>
+            </div>
+
+            <!-- RGPD -->
             <div class="form-group checkbox">
                 <label>
                     <input type="checkbox" name="RGPD" required>
