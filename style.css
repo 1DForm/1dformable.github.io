@@ -409,7 +409,6 @@ section {
     display: inline-flex;
 }
 
-
 /* CTA */
 .cta {
     padding: 70px 0;
@@ -590,6 +589,31 @@ section {
     font-size: 16px;
     resize: vertical;
 }
+
+/* Alignement RGPD */
+.rgpd-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+/* Case à cocher */
+.rgpd-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Texte RGPD */
+.rgpd-label span {
+    display: block;
+    font-size: 15px;
+}
+
 
 /* FOOTER */
 footer {
