@@ -566,6 +566,46 @@ section {
     transform: scale(1.2);
 }
 
+/* Chips (bulles à cocher) */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s ease;
+    user-select: none;
+}
+
+.chip:hover {
+    background: var(--blue2);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
+.chip input {
+    transform: scale(1.2);
+}
+
+/* Champ message même largeur */
+.full-width {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical;
+}
+
 /* FOOTER */
 footer {
     background: #02152D;
