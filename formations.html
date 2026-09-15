@@ -219,24 +219,35 @@
     </div>
 </section>
         
-<footer>
-    <div class="footer-inner">
-        <div>
-            <div class="footer-brand">1DFormable</div>
-            <div>Apprendre. Pratiquer. Maîtriser.</div>
-        </div>
-        <div>
-            Contact :
-            <a href="mailto:s.come@1dformable.fr">s.come@1dformable.fr</a><br>
-            <a href="https://www.linkedin.com/company/1dformable" target="_blank">LinkedIn 1DFormable</a>
-        </div>
-        <div class="footer-links">
-            <a href="mentions-legales.html">Mentions légales</a><br>
-            <a href="politique-confidentialite.html">Politique de confidentialité</a><br>
-            <a href="conditions-generales.html">Conditions générales</a>
-        </div>
-    </div>
-</footer>
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+    
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+
+            // Détection de la page actuelle
+            const page = window.location.pathname.split("/").pop();
+
+            // Activation du lien correspondant
+            if (page === "mentions-legales.html") {
+                document.getElementById("link-mentions").classList.add("active");
+            }
+            if (page === "politique-confidentialite.html") {
+                document.getElementById("link-politique").classList.add("active");
+            }
+            if (page === "conditions-generales.html") {
+                document.getElementById("link-conditions").classList.add("active");
+            }
+        });
+</script>
 
 </body>
 </html>
