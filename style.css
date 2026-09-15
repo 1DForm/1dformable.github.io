@@ -653,6 +653,12 @@ footer {
     font-weight: 700;
 }
 
+.footer-label {
+    color: #fff;
+    font-weight: 600;
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 850px) {
     .nav-links a:not(.nav-cta) {
