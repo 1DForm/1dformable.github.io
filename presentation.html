@@ -46,17 +46,26 @@
         </div>
 
         <!-- PHOTO -->
-       <div class="photo" style="text-align:center; margin-bottom:40px;">
-    <img src="moi.png" alt="Photo du formateur"
-         style="
-            max-width:320px;
-            width:100%;
-            height:auto;
-            border-radius:12px;
-            object-fit:cover;
-            box-shadow:0 4px 20px rgba(0,0,0,0.15);
-        ">
-</div>
+        <div class="photo" style="text-align:center; margin-bottom:40px;">
+            <div style="
+                display:inline-block;
+                padding:0;
+                border-radius:12px;
+                overflow:hidden;
+                filter:drop-shadow(0 4px 20px rgba(0,0,0,0.15));
+            ">
+                <img src="moi.jpg" alt="Photo du formateur"
+                     style="
+                        max-width:320px;
+                        width:100%;
+                        height:auto;
+                        display:block;
+                        border-radius:12px;
+                        mask-image: radial-gradient(circle, black 60%, transparent 100%);
+                        -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+                     ">
+            </div>
+        </div>
 
         <!-- TEXTE -->
         <p style="font-size:18px; line-height:1.7;">
