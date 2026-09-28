@@ -149,20 +149,35 @@ a {
 }
 
 .hero-inner {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 100px 24px;
     text-align: center;
 }
  
 .hero h1 {
-    margin: 0 auto 20px;
-    max-width: 1000px;
+    font-size: 4.5rem;
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 30px;
 }
  
+.hero h1 span {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.5em;
+    line-height: 1.2;
+    color: var(--blue2);
+}
+
 .hero p {
-    margin: 0 auto 35px;
-    max-width: 900px;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: rgba(255,255,255,.92);
 }
  
 .hero-subtitle {
