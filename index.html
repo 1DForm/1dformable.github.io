@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formation Informatique, Bureautique, IA et BIM à distance | 1DFormable</title>
-    <meta name="description"
-        content="Formations professionnelles en informatique, bureautique, intelligence artificielle, BIM, réseaux et électricité. Cours à distance personnalisés pour particuliers, indépendants et entreprises.">
-    <meta name="keywords"
-        content="formation informatique, formation Excel, formation Word, formation IA, formation BIM, formation réseaux, formation électricité, formateur informatique">
+    <meta name="description" content="Formations professionnelles en informatique, bureautique, intelligence artificielle, BIM, réseaux et électricité. Cours à distance personnalisés pour particuliers, indépendants et professionnels.">
+    <meta name="keywords" content="formation informatique, formation Excel, formation Word, formation IA, formation BIM, formation réseaux, formation électricité, formateur informatique">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://1dformable.fr/">
     <!-- Open Graph -->
@@ -18,7 +16,6 @@
     <meta property="og:image" content="https://1dformable.fr/Logo_1DForm.jpeg">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/png" href="Favicon.png">
     <link rel="icon" href="Favicon.png">
     <link rel="stylesheet" href="style.css">
     <!-- Données structurées -->
@@ -68,7 +65,7 @@
         </div>
     </header>
             
-    <section>
+    <section id="formations">
         <div class="container">
             <div class="section-title">
                 <div class="label">Nos formations</div>
@@ -104,8 +101,8 @@
     
                 <article class="card">
                     <div class="icon">✦</div>
-                    <h3>Usage professionnel de l’IA</h3>
-                    <p>Utiliser l’intelligence artificielle avec méthode dans son activité.</p>
+                    <h3>Usage professionnel de l'IA</h3>
+                    <p>Utiliser l'intelligence artificielle avec méthode dans son activité.</p>
                     <br>
                     <a class="btn btn-primary" href="ia.html">Voir la formation</a>
                 </article>
@@ -120,7 +117,7 @@
     
                 <article class="card">
                     <div class="icon">◉</div>
-                    <h3>Vidéosurveillance & contrôle d’accès</h3>
+                    <h3>Vidéosurveillance & contrôle d'accès</h3>
                     <p>Technologies, architecture et principes des systèmes de sûreté.</p>
                     <br>
                     <a class="btn btn-primary" href="videosurveillance.html">Voir la formation</a>
@@ -143,7 +140,7 @@
             <div class="section-title">
                 <div class="label">Notre approche</div>
                 <h2>Pas seulement apprendre. Savoir faire.</h2>
-                <p>Des formations conçues autour de la compréhension, de la pratique et de l’autonomie professionnelle.</p>
+                <p>Des formations conçues autour de la compréhension, de la pratique et de l'autonomie professionnelle.</p>
             </div>
     
             <div class="benefits">
@@ -154,7 +151,7 @@
     
                 <div class="benefit">
                     <strong>02 — Pratiquer</strong>
-                    <span>Des exercices et cas concrets pour passer de la théorie à l’action.</span>
+                    <span>Des exercices et cas concrets pour passer de la théorie à l'action.</span>
                 </div>
     
                 <div class="benefit">
@@ -189,7 +186,7 @@
     
             <p style="font-size:18px; line-height:1.7; text-align:center; max-width:750px; margin:0 auto;">
                 1DFormable est porté par un formateur expérimenté, issu du terrain,
-                spécialisé en électricité, contrôle d’accès, vidéosurveillance et environnements IT.
+                spécialisé en électricité, contrôle d'accès, vidéosurveillance et environnements IT.
                 Une expertise technique solide, mise au service de formations concrètes,
                 modernes et directement applicables en entreprise.
             </p>
@@ -210,15 +207,20 @@
                 // Détection de la page actuelle
                 const page = window.location.pathname.split("/").pop();
     
-                // Activation du lien correspondant
-                if (page === "mentions-legales.html") {
-                    document.getElementById("link-mentions").classList.add("active");
+                // Activation du lien correspondant avec vérification de l'existance
+                const linkMentions = document.getElementById("link-mentions");
+                if (page === "mentions-legales.html" && linkMentions) {
+                    linkMentions.classList.add("active");
                 }
-                if (page === "politique-confidentialite.html") {
-                    document.getElementById("link-politique").classList.add("active");
+    
+                const linkPolitique = document.getElementById("link-politique");
+                if (page === "politique-confidentialite.html" && linkPolitique) {
+                    linkPolitique.classList.add("active");
                 }
-                if (page === "conditions-generales.html") {
-                    document.getElementById("link-conditions").classList.add("active");
+    
+                const linkConditions = document.getElementById("link-conditions");
+                if (page === "conditions-generales.html" && linkConditions) {
+                    linkConditions.classList.add("active");
                 }
             });
     </script>
