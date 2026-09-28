@@ -1,64 +1,51 @@
 <footer>
     <div class="footer-inner">
 
-        <div>
-            <div class="footer-brand">1DFormable</div>
-            <div>Apprendre. Pratiquer. Maîtriser.</div>
+        <div class="footer-brand">
+            <h3>1DFormable</h3>
+            <p>
+                Apprendre. Pratiquer. Maîtriser.
+            </p>
+            <p>
+                Contact : contact@1dformable.fr
+            </p>
         </div>
 
-        <div>
-            <span class="footer-label">Contact :</span>
-            <a href="mailto:contact@1dformable.fr">
-                contact@1dformable.fr
-            </a>
-            <br>
+        <div class="footer-col">
+            <h4>Navigation</h4>
 
-            <span class="footer-label">LinkedIn :</span>
-            <a href="https://www.linkedin.com/company/1dformable"
-               target="_blank"
-               rel="noopener noreferrer">
-                1DFormable
-            </a>
+            <div class="footer-links">
+                index.htmlAccueil</a>
+                formations.htmlFormations</a>
+                approche.htmlNotre approche</a>
+                contact.htmlContact</a>
+            </div>
         </div>
 
-        <div class="footer-links">
-            <a id="link-mentions"
-               href="mentions-legales.html">
-                Mentions légales
-            </a>
-            <br>
+        <div class="footer-col">
+            <h4>Informations</h4>
 
-            <a id="link-politique"
-               href="politique-confidentialite.html">
-                Politique de confidentialité
-            </a>
-            <br>
+            <div class="footer-links">
+                <a id="link-mentions"
+                   href="mentions-legales.html">
+                   Mentions légales
+                </a>
 
-            <a id="link-conditions"
-               href="conditions-generales.html">
-                Conditions générales
-            </a>
+                <a id="link-politique"
+                   href="politique-confidentialite.html">
+                   Politique de confidentialité
+                </a>
+
+                <a id="link-conditions"
+                   href="conditions-generales.html">
+                   Conditions générales
+                </a>
+            </div>
         </div>
 
     </div>
+
+    <div class="footer-bottom">
+        © 2026 1DFormable. Tous droits réservés.
+    </div>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const page = window.location.pathname.split("/").pop();
-
-    const links = {
-        "mentions-legales.html": "link-mentions",
-        "politique-confidentialite.html": "link-politique",
-        "conditions-generales.html": "link-conditions"
-    };
-
-    if (links[page]) {
-        document
-            .getElementById(links[page])
-            ?.classList.add("active");
-    }
-
-});
-</script>
