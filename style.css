@@ -124,13 +124,12 @@ a {
     overflow: hidden;
     background: linear-gradient(135deg, #02152F, #063665 62%, #0759B8);
     color: #fff;
-    min-height: 500px;
 }
 
 .hero-inner {
     max-width: 900px;
     margin: 0 auto;
-    padding: 100px 24px;
+    padding: 70px 24px;
     text-align: center;
 }
 
