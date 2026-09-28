@@ -56,9 +56,7 @@ a {
     transform: translateY(-6px);
 }
 
-/* ============================================
-   NAVBAR
-   ============================================ */
+/* NAVBAR */
 .navbar {
     margin-top: 0;
     position: relative;
@@ -136,9 +134,7 @@ a {
     box-shadow: 0 4px 12px rgba(255, 121, 0, 0.3);
 }
 
-/* ============================================
-   HERO
-   ============================================ */
+/* HERO */
 .hero {
     position: relative;
     overflow: hidden;
@@ -178,9 +174,7 @@ a {
     color: rgba(255, 255, 255, 0.92);
 }
 
-/* ============================================
-   BUTTONS
-   ============================================ */
+/* BUTTONS */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -232,9 +226,7 @@ a {
     transform: translateY(0);
 }
 
-/* ============================================
-   LAYOUT
-   ============================================ */
+/* LAYOUT */
 .container {
     max-width: 1200px;
     margin: auto;
@@ -273,9 +265,7 @@ section {
     font-size: 16px;
 }
 
-/* ============================================
-   GRID & CARDS
-   ============================================ */
+/* GRID & CARDS */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -328,9 +318,7 @@ section {
     transform: scale(1.05);
 }
 
-/* ============================================
-   PROGRAM
-   ============================================ */
+/* PROGRAM */
 .program {
     background: white;
 }
@@ -386,9 +374,7 @@ section {
     font-size: 14px;
 }
 
-/* ============================================
-   INFO BOX
-   ============================================ */
+/* INFO BOX */
 .info-box {
     background: linear-gradient(145deg, #031B3A, #0759B8);
     color: white;
@@ -427,9 +413,7 @@ section {
     margin-top: 4px;
 }
 
-/* ============================================
-   HIGHLIGHT SECTION
-   ============================================ */
+/* HIGHLIGHT SECTION */
 .highlight {
     background: var(--navy);
     color: white;
@@ -477,9 +461,7 @@ section {
     line-height: 1.6;
 }
 
-/* ============================================
-   APPROACH BUTTON
-   ============================================ */
+/* APPROACH BUTTON */
 .approach-button {
     text-align: center;
     margin-top: 40px;
@@ -489,9 +471,7 @@ section {
     display: inline-flex;
 }
 
-/* ============================================
-   CTA SECTION
-   ============================================ */
+/* CTA SECTION */
 .cta {
     padding: 70px 0;
     background: white;
@@ -529,9 +509,7 @@ section {
     font-size: 16px;
 }
 
-/* ============================================
-   MODULES
-   ============================================ */
+/* MODULES */
 .modules .module {
     margin-bottom: 60px;
     padding: 30px;
@@ -575,9 +553,7 @@ section {
     font-weight: bold;
 }
 
-/* ============================================
-   MODULE CARD (Consolidated)
-   ============================================ */
+/* MODULE CARD (Consolidated) */
 .module-card {
     border: 1px solid var(--border);
     background: var(--white);
@@ -628,9 +604,7 @@ section {
     line-height: 1.6;
 }
 
-/* ============================================
-   FORM
-   ============================================ */
+/* FORM */
 .form-card {
     background: var(--white);
     padding: 30px;
@@ -688,9 +662,7 @@ section {
     font-weight: 400;
 }
 
-/* ============================================
-   CHIPS
-   ============================================ */
+/* CHIPS */
 .chips {
     display: flex;
     flex-wrap: wrap;
@@ -763,9 +735,7 @@ section {
     box-shadow: 0 0 0 3px rgba(8, 127, 245, 0.1);
 }
 
-/* ============================================
-   RGPD
-   ============================================ */
+/* RGPD */
 .rgpd-label {
     display: flex;
     align-items: flex-start;
@@ -800,9 +770,7 @@ section {
     font-size: 15px;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* FOOTER */
 footer {
     background: #02152D;
     color: #9FB3C7;
@@ -848,9 +816,7 @@ footer {
     font-weight: 600;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+/* RESPONSIVE DESIGN */
 @media (max-width: 850px) {
     .nav-links a:not(.nav-cta) {
         display: none;
