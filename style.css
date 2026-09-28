@@ -9,6 +9,7 @@
     --text: #172333;
     --muted: #68788A;
     --border: #DCE5EF;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -23,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
     color: var(--text);
     background: var(--light);
     line-height: 1.6;
@@ -37,7 +38,7 @@ a {
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp .6s ease forwards;
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 @keyframes fadeInUp {
@@ -48,22 +49,24 @@ a {
 }
 
 .card {
-    transition: transform .3s ease;
+    transition: var(--transition);
 }
- 
+
 .card:hover {
     transform: translateY(-6px);
 }
 
-/* NAVBAR */
+/* ============================================
+   NAVBAR
+   ============================================ */
 .navbar {
     margin-top: 0;
     position: relative;
     top: 0;
     z-index: 100;
-    background: rgba(3, 27, 58, .97);
+    background: rgba(3, 27, 58, 0.97);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-container {
@@ -83,6 +86,11 @@ a {
     color: white;
     font-size: 21px;
     font-weight: 700;
+    transition: var(--transition);
+}
+
+.nav-logo:hover {
+    transform: scale(1.02);
 }
 
 .nav-logo img {
@@ -102,7 +110,8 @@ a {
 }
 
 .nav-links a {
-    opacity: .88;
+    opacity: 0.88;
+    transition: var(--transition);
 }
 
 .nav-links a:hover {
@@ -116,31 +125,42 @@ a {
     border-radius: 6px;
     font-weight: 700;
     opacity: 1 !important;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
 }
 
-/* HERO */
- 
+.nav-cta:hover {
+    background: #ff8d26;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 121, 0, 0.3);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
 .hero {
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, #02152F, #063665 62%, #0759B8);
     color: #fff;
 }
- 
+
 .hero-inner {
     max-width: 900px;
     margin: 0 auto;
     padding: 70px 24px;
     text-align: center;
 }
- 
+
 .hero h1 {
     margin: 0 0 20px;
     font-size: 4.5rem;
     line-height: 1.05;
     font-weight: 800;
+    letter-spacing: -1px;
 }
- 
+
 .hero h1 span {
     display: block;
     margin-top: 12px;
@@ -149,16 +169,18 @@ a {
     font-weight: 500;
     line-height: 1.2;
 }
- 
+
 .hero p {
     max-width: 750px;
     margin: 0 auto 40px;
     font-size: 1.25rem;
     line-height: 1.8;
-    color: rgba(255,255,255,.92);
+    color: rgba(255, 255, 255, 0.92);
 }
 
-/* BUTTONS */
+/* ============================================
+   BUTTONS
+   ============================================ */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -166,7 +188,15 @@ a {
     padding: 14px 23px;
     border-radius: 6px;
     font-weight: 700;
-    transition: .25s;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--blue2);
+    outline-offset: 2px;
 }
 
 .btn-primary {
@@ -177,16 +207,34 @@ a {
 .btn-primary:hover {
     background: #ff8d26;
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 121, 0, 0.25);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
 }
 
 .btn-secondary {
-    border: 1px solid rgba(255, 255, 255, .35);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     color: #fff;
-    background: rgba(255, 255, 255, .05);
+    background: rgba(255, 255, 255, 0.05);
     margin-left: 10px;
+    transition: var(--transition);
 }
 
-/* LAYOUT */
+.btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
 .container {
     max-width: 1200px;
     margin: auto;
@@ -216,14 +264,18 @@ section {
     line-height: 1.15;
     color: var(--navy);
     margin: 9px 0 12px;
+    font-weight: 800;
 }
 
 .section-title p {
     color: var(--muted);
     margin: 0;
+    font-size: 16px;
 }
 
-/* GRID */
+/* ============================================
+   GRID & CARDS
+   ============================================ */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -235,19 +287,26 @@ section {
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 28px;
-    box-shadow: 0 5px 20px rgba(3, 27, 58, .05);
+    box-shadow: 0 5px 20px rgba(3, 27, 58, 0.05);
+}
+
+.card:hover {
+    border-color: var(--blue2);
+    box-shadow: 0 10px 30px rgba(3, 27, 58, 0.1);
 }
 
 .card h3 {
     color: var(--navy);
     margin: 0 0 9px;
     font-size: 19px;
+    font-weight: 700;
 }
 
 .card p {
     color: var(--muted);
     margin: 0;
     font-size: 15px;
+    line-height: 1.6;
 }
 
 .icon {
@@ -257,20 +316,28 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background: rgba(8, 127, 245, .1);
+    background: rgba(8, 127, 245, 0.1);
     color: var(--blue);
     font-size: 25px;
     margin-bottom: 17px;
+    transition: var(--transition);
 }
 
-/* PROGRAM */
+.card:hover .icon {
+    background: rgba(8, 127, 245, 0.15);
+    transform: scale(1.05);
+}
+
+/* ============================================
+   PROGRAM
+   ============================================ */
 .program {
     background: white;
 }
 
 .program-grid {
     display: grid;
-    grid-template-columns: 1.2fr .8fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 45px;
 }
 
@@ -285,6 +352,13 @@ section {
     padding: 18px;
     background: var(--light);
     border-radius: 8px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.program-item:hover {
+    border-color: var(--blue2);
+    background: rgba(8, 127, 245, 0.05);
 }
 
 .num {
@@ -297,12 +371,14 @@ section {
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    flex-shrink: 0;
 }
 
 .program-item strong {
     display: block;
     color: var(--navy);
     margin-bottom: 3px;
+    font-weight: 600;
 }
 
 .program-item span {
@@ -310,23 +386,27 @@ section {
     font-size: 14px;
 }
 
-/* INFO BOX */
+/* ============================================
+   INFO BOX
+   ============================================ */
 .info-box {
     background: linear-gradient(145deg, #031B3A, #0759B8);
     color: white;
     border-radius: 12px;
     padding: 30px;
     height: max-content;
+    box-shadow: 0 8px 24px rgba(3, 27, 58, 0.2);
 }
 
 .info-box h3 {
     margin-top: 0;
     font-size: 24px;
+    font-weight: 700;
 }
 
 .info-row {
     padding: 14px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .info-row:last-child {
@@ -339,13 +419,17 @@ section {
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .info-row span {
     color: #E1EDF8;
+    margin-top: 4px;
 }
 
-/* HIGHLIGHT */
+/* ============================================
+   HIGHLIGHT SECTION
+   ============================================ */
 .highlight {
     background: var(--navy);
     color: white;
@@ -367,33 +451,47 @@ section {
 
 .benefit {
     padding: 25px;
-    border: 1px solid rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 9px;
-    background: rgba(255, 255, 255, .05);
+    background: rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.benefit:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--blue2);
+    transform: translateY(-4px);
 }
 
 .benefit strong {
     display: block;
     color: var(--blue2);
     margin-bottom: 7px;
+    font-weight: 700;
 }
 
 .benefit span {
     color: #D2E0ED;
     font-size: 14px;
+    line-height: 1.6;
 }
 
-/* APPROACH BUTTON */
+/* ============================================
+   APPROACH BUTTON
+   ============================================ */
 .approach-button {
     text-align: center;
-    margin-top: 40px; /* descend le bouton */
+    margin-top: 40px;
 }
 
 .approach-button .btn {
     display: inline-flex;
 }
 
-/* CTA */
+/* ============================================
+   CTA SECTION
+   ============================================ */
 .cta {
     padding: 70px 0;
     background: white;
@@ -410,30 +508,49 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 25px;
+    box-shadow: 0 12px 36px rgba(3, 27, 58, 0.15);
+    transition: var(--transition);
+}
+
+.cta-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px rgba(3, 27, 58, 0.2);
 }
 
 .cta-box h2 {
     margin: 0 0 8px;
     font-size: 30px;
+    font-weight: 700;
 }
 
 .cta-box p {
     margin: 0;
     color: #D7E7F7;
+    font-size: 16px;
 }
 
+/* ============================================
+   MODULES
+   ============================================ */
 .modules .module {
     margin-bottom: 60px;
     padding: 30px;
     background: var(--white);
     border-radius: 12px;
     border: 1px solid var(--border);
-    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: var(--transition);
+}
+
+.modules .module:hover {
+    border-color: var(--blue2);
+    box-shadow: 0 8px 20px rgba(8, 127, 245, 0.1);
 }
 
 .module h3 {
     margin-top: 0;
     color: var(--navy);
+    font-weight: 700;
 }
 
 .module-list {
@@ -444,21 +561,42 @@ section {
 
 .module-list li {
     margin-bottom: 10px;
+    padding-left: 24px;
+    position: relative;
+    color: var(--text);
+    line-height: 1.6;
 }
 
-/* MODULES */
+.module-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+/* ============================================
+   MODULE CARD (Consolidated)
+   ============================================ */
 .module-card {
     border: 1px solid var(--border);
     background: var(--white);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     margin-bottom: 40px;
+    transition: var(--transition);
+}
+
+.module-card:hover {
+    border-color: var(--blue2);
+    box-shadow: 0 8px 20px rgba(8, 127, 245, 0.1);
 }
 
 .module-card h3 {
     margin-top: 0;
     color: var(--navy);
+    font-weight: 700;
 }
 
 .module-card ul {
@@ -469,19 +607,36 @@ section {
 
 .module-card ul li {
     margin-bottom: 10px;
+    padding-left: 24px;
+    position: relative;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.module-card ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+    font-weight: bold;
 }
 
 .module-card .module-desc {
     color: var(--muted);
     margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
+/* ============================================
+   FORM
+   ============================================ */
 .form-card {
     background: var(--white);
     padding: 30px;
     border-radius: 12px;
     border: 1px solid var(--border);
-    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     max-width: 600px;
     margin: auto;
 }
@@ -493,25 +648,49 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 6px;
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--navy);
 }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--border);
     border-radius: 8px;
     font-size: 16px;
+    font-family: inherit;
+    transition: var(--transition);
+    background-color: var(--white);
+    color: var(--text);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(8, 127, 245, 0.1);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+    background-color: var(--light);
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
 .form-group.checkbox label {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 400;
 }
 
-/* Conteneur des chips */
+/* ============================================
+   CHIPS
+   ============================================ */
 .chips {
     display: flex;
     flex-wrap: wrap;
@@ -519,51 +698,53 @@ section {
     margin-bottom: 20px;
 }
 
-/* Style des bulles */
 .chip {
     background: var(--white);
     border: 1px solid var(--border);
     padding: 10px 16px;
     border-radius: 20px;
     cursor: pointer;
-    transition: .2s ease;
+    transition: var(--transition);
     display: inline-block;
 }
 
-/* Alignement interne parfait */
+.chip:hover {
+    border-color: var(--blue);
+    box-shadow: 0 4px 12px rgba(8, 127, 245, 0.15);
+    background: rgba(8, 127, 245, 0.03);
+}
+
 .chip-inner {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Case à cocher */
 .chip input[type="checkbox"] {
     width: 18px;
     height: 18px;
     cursor: pointer;
     margin: 0;
+    accent-color: var(--blue);
+    transition: var(--transition);
 }
 
-/* Texte */
+.chip input[type="checkbox"]:focus {
+    outline: 2px solid var(--blue2);
+    outline-offset: 2px;
+}
+
 .chip span {
     font-size: 15px;
     color: var(--text);
+    user-select: none;
 }
 
-/* Hover */
-.chip:hover {
-    border-color: var(--blue);
-    box-shadow: 0 0 6px rgba(0,0,0,.08);
-}
-
-/* Optionnel : chip sélectionné */
 .chip input[type="checkbox"]:checked + span {
     font-weight: 600;
     color: var(--blue);
 }
 
-/* Champ message même largeur */
 .full-width {
     width: 100%;
     padding: 12px;
@@ -571,37 +752,57 @@ section {
     border-radius: 8px;
     font-size: 16px;
     resize: vertical;
+    font-family: inherit;
+    transition: var(--transition);
+    color: var(--text);
 }
 
-/* Alignement RGPD */
+.full-width:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(8, 127, 245, 0.1);
+}
+
+/* ============================================
+   RGPD
+   ============================================ */
 .rgpd-label {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     cursor: pointer;
     color: var(--text);
     line-height: 1.4;
+    transition: var(--transition);
 }
 
 .rgpd-label:hover span {
     color: var(--blue);
 }
 
-/* Case à cocher */
 .rgpd-label input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    margin: 0;
+    margin: 2px 0 0 0;
     cursor: pointer;
+    accent-color: var(--blue);
+    flex-shrink: 0;
+    transition: var(--transition);
 }
 
-/* Texte RGPD */
+.rgpd-label input[type="checkbox"]:focus {
+    outline: 2px solid var(--blue2);
+    outline-offset: 2px;
+}
+
 .rgpd-label span {
     display: block;
     font-size: 15px;
 }
 
-/* FOOTER */
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
     background: #02152D;
     color: #9FB3C7;
@@ -624,6 +825,11 @@ footer {
 
 .footer-inner a {
     color: var(--blue2);
+    transition: var(--transition);
+}
+
+.footer-inner a:hover {
+    color: var(--orange);
 }
 
 .footer-links a {
@@ -642,8 +848,9 @@ footer {
     font-weight: 600;
 }
 
-
-/* RESPONSIVE */
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
 @media (max-width: 850px) {
     .nav-links a:not(.nav-cta) {
         display: none;
@@ -662,6 +869,14 @@ footer {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -675,24 +890,64 @@ footer {
     }
 
     .hero h1 {
-        font-size: 42px;
+        font-size: 2.5rem;
+        line-height: 1.1;
     }
 
     .hero p {
-        font-size: 17px;
+        font-size: 1rem;
     }
 
     .btn-secondary {
-        margin: 10px 0 0;
+        margin: 10px 0 0 0;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 14px;
     }
 
     .cta-box {
         padding: 32px 24px;
     }
 
+    .cta-box h2 {
+        font-size: 24px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
     .footer-inner {
         flex-direction: column;
     }
+
+    .nav-container {
+        min-height: 60px;
+        padding: 0 16px;
+    }
+
+    .program-item {
+        padding: 14px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
 }
 
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
 
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
