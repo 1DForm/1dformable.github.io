@@ -150,23 +150,8 @@ a {
 .hero-inner {
     max-width: 900px;
     margin: 0 auto;
-    padding: 82px 24px 78px;
+    padding: 55px 24px 50px;
     text-align: center;
-}
-
-/* Petit label au-dessus du titre */
-.hero::before {
-    content: "FORMATION PROFESSIONNELLE";
-    display: block;
-    width: fit-content;
-    margin: 0 auto 18px;
-    padding: 6px 13px;
-    border: 1px solid rgba(40, 169, 255, 0.45);
-    border-radius: 20px;
-    color: var(--blue2);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
 }
 
 /* Titre */
