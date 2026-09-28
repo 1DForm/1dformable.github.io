@@ -138,42 +138,69 @@ a {
 .hero {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #02152F, #063665 62%, #0759B8);
+    background: linear-gradient(
+        135deg,
+        #02152F 0%,
+        #063665 65%,
+        #0759B8 100%
+    );
     color: #fff;
 }
 
 .hero-inner {
     max-width: 900px;
     margin: 0 auto;
-    padding: 70px 24px;
+    padding: 82px 24px 78px;
     text-align: center;
 }
 
-.hero h1 {
-    margin: 0 0 20px;
-    font-size: 4.5rem;
-    line-height: 1.05;
-    font-weight: 800;
-    letter-spacing: -1px;
+/* Petit label au-dessus du titre */
+.hero::before {
+    content: "FORMATION PROFESSIONNELLE";
+    display: block;
+    width: fit-content;
+    margin: 0 auto 18px;
+    padding: 6px 13px;
+    border: 1px solid rgba(40, 169, 255, 0.45);
+    border-radius: 20px;
+    color: var(--blue2);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
+/* Titre */
+.hero h1 {
+    margin: 0 0 22px;
+    font-size: 4.2rem;
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+/* Deuxième ligne */
 .hero h1 span {
     display: block;
-    margin-top: 12px;
+    margin-top: 5px;
     color: var(--blue2);
-    font-size: 0.7em;
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: 1em;
+    font-weight: 800;
+    line-height: 1.05;
 }
 
+/* Sous-titre */
 .hero p {
-    max-width: 750px;
-    margin: 0 auto 40px;
-    font-size: 1.25rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.92);
+    max-width: 760px;
+    margin: 0 auto 38px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.88);
 }
 
+/* Boutons */
+.hero .btn {
+    min-height: 54px;
+}
 /* BUTTONS */
 .btn {
     display: inline-flex;
