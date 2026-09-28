@@ -251,40 +251,37 @@
             <h2>Besoin de cette formation ?</h2>
             <p>Demandez un devis ou échangez sur votre besoin de formation.</p>
         </div>
-        <a class="btn btn-primary" href="mailto:s.come@1dformable.fr?subject=Demande%20de%20formation%20-%20Électricité & basse tension">Demander un devis / une formation</a>
+        <a class="btn btn-primary" href="mailto:s.come@1dformable.fr?subject=Demande%20de%20formation%20-%20Bureautique professionnelle">Demander un devis / une formation</a>
     </div>
 </section>
 
-<div id="footer"></div>
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
-</script>
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+
+                const page = window.location.pathname.split("/").pop();
+
+                const linkMentions = document.getElementById("link-mentions");
+                if (page === "mentions-legales.html" && linkMentions) {
+                    linkMentions.classList.add("active");
+                }
+
+                const linkPolitique = document.getElementById("link-politique");
+                if (page === "politique-confidentialite.html" && linkPolitique) {
+                    linkPolitique.classList.add("active");
+                }
+
+                const linkConditions = document.getElementById("link-conditions");
+                if (page === "conditions-generales.html" && linkConditions) {
+                    linkConditions.classList.add("active");
+                }
+            });
+    </script>
     
-<div id="footer"></div>
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-
-            // Détection de la page actuelle
-            const page = window.location.pathname.split("/").pop();
-
-            // Activation du lien correspondant
-            if (page === "mentions-legales.html") {
-                document.getElementById("link-mentions").classList.add("active");
-            }
-            if (page === "politique-confidentialite.html") {
-                document.getElementById("link-politique").classList.add("active");
-            }
-            if (page === "conditions-generales.html") {
-                document.getElementById("link-conditions").classList.add("active");
-            }
-        });
-</script>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem('cookiesAccepted') === 'true') {
