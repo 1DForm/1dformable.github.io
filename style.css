@@ -150,6 +150,20 @@ a {
     padding: 85px 24px;
 }
 
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+ 
+.hero-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    max-width: 800px;
+    color: rgba(255,255,255,0.9);
+}
+
 .breadcrumb {
     color: #9CCFFF;
     font-size: 13px;
