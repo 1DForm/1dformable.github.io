@@ -111,5 +111,18 @@
         });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            // Les cookies sont acceptés : tu peux charger Google Analytics ici
+            loadGoogleAnalytics();
+        }
+    });
+    
+    function loadGoogleAnalytics() {
+        // Code Google Analytics si tu l'utilises
+    }
+</script>
+
 </body>
 </html>
