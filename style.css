@@ -119,37 +119,43 @@ a {
 }
 
 /* HERO */
+ 
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #02152F, #063665 62%, #0759B8);
+    color: #fff;
+}
+ 
 .hero-inner {
-    max-width: 920px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 100px 24px 90px;
+    padding: 70px 24px;
     text-align: center;
 }
  
 .hero h1 {
-    margin: 0;
-    font-size: clamp(3.5rem, 8vw, 5rem);
-    line-height: 0.95;
+    margin: 0 0 20px;
+    font-size: 4.5rem;
+    line-height: 1.05;
     font-weight: 800;
-    letter-spacing: -2px;
 }
  
 .hero h1 span {
     display: block;
-    margin-top: 26px;
-    color: rgba(255,255,255,.9);
-    font-size: 0.32em;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    line-height: 1.4;
+    margin-top: 12px;
+    color: var(--blue2);
+    font-size: 0.55em;
+    font-weight: 500;
+    line-height: 1.2;
 }
  
 .hero p {
-    max-width: 650px;
-    margin: 40px auto 50px;
-    font-size: 1.15rem;
-    line-height: 1.85;
-    color: rgba(255,255,255,.85);
+    max-width: 750px;
+    margin: 0 auto 40px;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,.92);
 }
 
 /* BUTTONS */
