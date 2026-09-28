@@ -315,10 +315,44 @@
             </div>
         </div>
     </section>
-           
+
     <div id="footer"></div>
 
-    <!-- Script pour les cookies RGPD -->
+    <script>
+        fetch("footer.html")
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Impossible de charger le footer.");
+                }
+
+                return response.text();
+            })
+            .then(function(data) {
+                document.getElementById("footer").innerHTML = data;
+
+                const page = window.location.pathname.split("/").pop();
+
+                const linkMentions = document.getElementById("link-mentions");
+                const linkPolitique = document.getElementById("link-politique");
+                const linkConditions = document.getElementById("link-conditions");
+
+                if (page === "mentions-legales.html" && linkMentions) {
+                    linkMentions.classList.add("active");
+                }
+
+                if (page === "politique-confidentialite.html" && linkPolitique) {
+                    linkPolitique.classList.add("active");
+                }
+
+                if (page === "conditions-generales.html" && linkConditions) {
+                    linkConditions.classList.add("active");
+                }
+            })
+            .catch(function(error) {
+                console.error(error);
+            });
+    </script>
+
     <script>
         // Affiche le pop-up si l'utilisateur n'a pas encore accepté
         document.addEventListener('DOMContentLoaded', function() {
@@ -346,32 +380,5 @@
         }
     </script>
 
-    <!-- Script pour charger le footer -->
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-                
-                // Détection de la page actuelle
-                const page = window.location.pathname.split("/").pop();
-                
-                // Activation du lien correspondant avec vérification de l'existance
-                const linkMentions = document.getElementById("link-mentions");
-                if (page === "mentions-legales.html" && linkMentions) {
-                    linkMentions.classList.add("active");
-                }
-                
-                const linkPolitique = document.getElementById("link-politique");
-                if (page === "politique-confidentialite.html" && linkPolitique) {
-                    linkPolitique.classList.add("active");
-                }
-                
-                const linkConditions = document.getElementById("link-conditions");
-                if (page === "conditions-generales.html" && linkConditions) {
-                    linkConditions.classList.add("active");
-                }
-            });
-    </script>
 </body>
 </html>
