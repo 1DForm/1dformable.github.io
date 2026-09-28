@@ -119,35 +119,42 @@
     </div>
 </section>
 
-<div id="footer"></div>
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
-</script>
-    
-<div id="footer"></div>
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
+    <div id="footer"></div>
 
-            // Détection de la page actuelle
-            const page = window.location.pathname.split("/").pop();
+    <script>
+        fetch("footer.html")
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Impossible de charger le footer.");
+                }
 
-            // Activation du lien correspondant
-            if (page === "mentions-legales.html") {
-                document.getElementById("link-mentions").classList.add("active");
-            }
-            if (page === "politique-confidentialite.html") {
-                document.getElementById("link-politique").classList.add("active");
-            }
-            if (page === "conditions-generales.html") {
-                document.getElementById("link-conditions").classList.add("active");
-            }
-        });
-</script>
+                return response.text();
+            })
+            .then(function(data) {
+                document.getElementById("footer").innerHTML = data;
+
+                const page = window.location.pathname.split("/").pop();
+
+                const linkMentions = document.getElementById("link-mentions");
+                const linkPolitique = document.getElementById("link-politique");
+                const linkConditions = document.getElementById("link-conditions");
+
+                if (page === "mentions-legales.html" && linkMentions) {
+                    linkMentions.classList.add("active");
+                }
+
+                if (page === "politique-confidentialite.html" && linkPolitique) {
+                    linkPolitique.classList.add("active");
+                }
+
+                if (page === "conditions-generales.html" && linkConditions) {
+                    linkConditions.classList.add("active");
+                }
+            })
+            .catch(function(error) {
+                console.error(error);
+            });
+    </script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
