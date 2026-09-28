@@ -124,6 +124,7 @@ a {
     overflow: hidden;
     background: linear-gradient(135deg, #02152F, #063665 62%, #0759B8);
     color: #fff;
+    min-height: 500px;
 }
 
 .hero-inner {
