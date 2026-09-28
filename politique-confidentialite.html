@@ -131,33 +131,41 @@
 
     <div id="footer"></div>
 
-    <!-- Script pour charger le footer et gérer la navigation active -->
     <script>
         fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Impossible de charger le footer.");
+                }
+
+                return response.text();
+            })
+            .then(function(data) {
                 document.getElementById("footer").innerHTML = data;
 
-                // Détection de la page actuelle
                 const page = window.location.pathname.split("/").pop();
 
-                // Activation du lien correspondant
-                if (page === "mentions-legales.html") {
-                    const linkMentions = document.getElementById("link-mentions");
-                    if (linkMentions) linkMentions.classList.add("active");
+                const linkMentions = document.getElementById("link-mentions");
+                const linkPolitique = document.getElementById("link-politique");
+                const linkConditions = document.getElementById("link-conditions");
+
+                if (page === "mentions-legales.html" && linkMentions) {
+                    linkMentions.classList.add("active");
                 }
-                if (page === "politique-confidentialite.html") {
-                    const linkPolitique = document.getElementById("link-politique");
-                    if (linkPolitique) linkPolitique.classList.add("active");
+
+                if (page === "politique-confidentialite.html" && linkPolitique) {
+                    linkPolitique.classList.add("active");
                 }
-                if (page === "conditions-generales.html") {
-                    const linkConditions = document.getElementById("link-conditions");
-                    if (linkConditions) linkConditions.classList.add("active");
+
+                if (page === "conditions-generales.html" && linkConditions) {
+                    linkConditions.classList.add("active");
                 }
+            })
+            .catch(function(error) {
+                console.error(error);
             });
     </script>
-
-    <!-- Script pour gérer les cookies (localStorage) -->
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             if (localStorage.getItem('cookiesAccepted') === 'true') {
