@@ -772,61 +772,73 @@ section {
 
 /* FOOTER */
 footer {
-background: #02152D;
-color: #9FB3C7;
-padding: 38px 24px;
-}
- 
-.footer-inner {
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-justify-content: space-between;
-gap: 30px;
-}
- 
-.footer-brand {
-color: #FFFFFF;
-font-size: 19px;
-font-weight: 700;
-margin-bottom: 8px;
-}
- 
-.footer-label {
-color: #FFFFFF;
-font-weight: 600;
-}
- 
-.footer-inner a {
-color: var(--blue2);
-text-decoration: none;
-transition: var(--transition);
-}
- 
-.footer-inner a:hover {
-color: var(--orange);
-}
- 
-/* Liens légaux */
- 
-.footer-links a {
-display: inline-block;
-margin-bottom: 8px;
-color: #FFFFFF;
-}
- 
-.footer-links a:hover {
-color: var(--orange);
-}
- 
-.footer-links a.active {
-color: var(--orange);
-font-weight: 700;
+    background: #02152D;
+    color: #9FB3C7;
+    padding: 45px 24px 20px;
 }
 
+/* Contenu principal du footer */
+.footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    text-align: center;
+    align-items: start;
+}
+
+/* Marque */
+.footer-brand {
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Labels */
+.footer-label {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Liens généraux */
+.footer-inner a {
+    color: var(--blue2);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-inner a:hover {
+    color: var(--orange);
+}
+
+/* Liens légaux */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--orange);
+}
+
+.footer-links a.active {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+/* Ligne copyright */
 .footer-bottom {
-    max-width: 1200px;
-    margin: 30px auto 0;
+    max-width: 1000px;
+    margin: 35px auto 0;
     padding-top: 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     text-align: center;
@@ -834,18 +846,21 @@ font-weight: 700;
     font-size: 13px;
 }
 
-/* Responsive */
- 
+/* Responsive */ 
 @media (max-width: 768px) {
+
     .footer-inner {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 28px;
         text-align: center;
-        gap: 24px;
+    }
+
+    .footer-links {
+        align-items: center;
     }
 
     .footer-bottom {
-        margin-top: 25px;
+        margin-top: 30px;
         padding-top: 16px;
         font-size: 12px;
     }
