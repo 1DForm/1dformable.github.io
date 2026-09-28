@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /formulaire.html
+Disallow: /merci.html
+Disallow: /admin/
+
+Sitemap: https://1dformable.fr/sitemap.xml
+
+# Google Search Console
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
