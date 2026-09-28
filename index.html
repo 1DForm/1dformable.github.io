@@ -87,24 +87,9 @@
       ]
     }
     </script>
-</head>
 
-<div id="cookie-banner" class="cookie-banner">
-    <div class="cookie-content">
-        <h3>Consentement aux cookies</h3>
-        <p>
-            Ce site utilise des cookies pour améliorer votre expérience et analyser le trafic. 
-            En acceptant, vous consentez à notre 
-            <a href="politique-confidentialite.html">politique de confidentialité</a>.
-        </p>
-        <div class="cookie-buttons">
-            <button id="cookie-decline" class="btn btn-secondary">Refuser</button>
-            <button id="cookie-accept" class="btn btn-primary">Accepter</button>
-        </div>
-    </div>
-</div>
-
-<style>
+    <!-- Styles pour le pop-up cookies -->
+    <style>
         .cookie-banner {
             position: fixed;
             bottom: 0;
@@ -148,7 +133,7 @@
             gap: 10px;
         }
         
-        .btn-secondary {
+        .cookie-btn-secondary {
             background: #666;
             color: #fff;
             padding: 10px 20px;
@@ -157,7 +142,7 @@
             cursor: pointer;
         }
         
-        .btn-primary {
+        .cookie-btn-primary {
             background: #ff7f00;
             color: #fff;
             padding: 10px 20px;
@@ -165,37 +150,26 @@
             border-radius: 4px;
             cursor: pointer;
         }
-</style>
+    </style>
+</head>
 
-<script>
-        // Affiche le pop-up si l'utilisateur n'a pas encore accepté
-        document.addEventListener('DOMContentLoaded', function() {
-            if (!localStorage.getItem('cookiesAccepted')) {
-                document.getElementById('cookie-banner').classList.add('show');
-            }
-        });
-        
-        // Bouton Accepter
-        document.getElementById('cookie-accept').addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-banner').classList.remove('show');
-            // Ici tu peux charger Google Analytics ou autres scripts
-            loadGoogleAnalytics();
-        });
-        
-        // Bouton Refuser
-        document.getElementById('cookie-decline').addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'false');
-            document.getElementById('cookie-banner').classList.remove('show');
-        });
-        
-        // Charge Google Analytics seulement si accepté
-        function loadGoogleAnalytics() {
-            // Ajoute ton code Google Analytics ici si tu l'utilises
-        }
-</script>    
-    
 <body>
+    <!-- Pop-up Cookies RGPD -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <h3>Consentement aux cookies</h3>
+            <p>
+                Ce site utilise des cookies pour améliorer votre expérience et analyser le trafic. 
+                En acceptant, vous consentez à notre 
+                <a href="politique-confidentialite.html">politique de confidentialité</a>.
+            </p>
+            <div class="cookie-buttons">
+                <button id="cookie-decline" class="cookie-btn-secondary">Refuser</button>
+                <button id="cookie-accept" class="cookie-btn-primary">Accepter</button>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a class="nav-logo" href="index.html">
@@ -212,14 +186,11 @@
 
     <header class="hero">
         <div class="hero-inner">
-           <h1>Formations professionnelles</h1>
-    
+            <h1>Formations professionnelles</h1>
             <p class="hero-subtitle">en informatique, bureautique, IA, BIM et techniques</p>
-            
             <p>Développez des compétences qui servent vraiment grâce à des formations
                 100 % à distance, pratiques, orientées autonomie, efficacité et mise
                 en application immédiate.</p>
-    
             <a class="btn btn-primary" href="formulaire.html">
                 Demander un devis / une formation
             </a>
@@ -236,9 +207,7 @@
                 <h2>Des formations pour comprendre, pratiquer et maîtriser</h2>
                 <p>Choisissez un domaine et découvrez le programme, les objectifs et les modalités de formation.</p>
             </div>
-    
             <div class="grid">
-    
                 <article class="card">
                     <div class="icon">💻</div>
                     <h3>Informatique & systèmes</h3>
@@ -246,7 +215,6 @@
                     <br>
                     <a class="btn btn-primary" href="informatique.html">Voir la formation</a>
                 </article>
-    
                 <article class="card">
                     <div class="icon">📊</div>
                     <h3>Bureautique</h3>
@@ -254,7 +222,6 @@
                     <br>
                     <a class="btn btn-primary" href="bureautique.html">Voir la formation</a>
                 </article>
-    
                 <article class="card">
                     <div class="icon">🌐</div>
                     <h3>Réseaux & sécurité</h3>
@@ -262,7 +229,6 @@
                     <br>
                     <a class="btn btn-primary" href="reseaux.html">Voir la formation</a>
                 </article>
-    
                 <article class="card">
                     <div class="icon">✦</div>
                     <h3>Usage professionnel de l'IA</h3>
@@ -270,7 +236,6 @@
                     <br>
                     <a class="btn btn-primary" href="ia.html">Voir la formation</a>
                 </article>
-    
                 <article class="card">
                     <div class="icon">⚡</div>
                     <h3>Électricité & basse tension</h3>
@@ -278,7 +243,6 @@
                     <br>
                     <a class="btn btn-primary" href="electricite.html">Voir la formation</a>
                 </article>
-    
                 <article class="card">
                     <div class="icon">◉</div>
                     <h3>Vidéosurveillance & contrôle d'accès</h3>
@@ -286,7 +250,6 @@
                     <br>
                     <a class="btn btn-primary" href="videosurveillance.html">Voir la formation</a>
                 </article>
-    
                 <article class="card">
                     <div class="icon">◈</div>
                     <h3>BIM & conception technique</h3>
@@ -294,7 +257,6 @@
                     <br>
                     <a class="btn btn-primary" href="bim.html">Voir la formation</a>
                 </article>
-    
             </div>
         </div>
     </section>
@@ -306,28 +268,23 @@
                 <h2>Pas seulement apprendre. Savoir faire.</h2>
                 <p>Des formations conçues autour de la compréhension, de la pratique et de l'autonomie professionnelle.</p>
             </div>
-    
             <div class="benefits">
                 <div class="benefit">
                     <strong>01 — Comprendre</strong>
                     <span>Des explications claires pour construire des bases solides.</span>
                 </div>
-    
                 <div class="benefit">
                     <strong>02 — Pratiquer</strong>
                     <span>Des exercices et cas concrets pour passer de la théorie à l'action.</span>
                 </div>
-    
                 <div class="benefit">
                     <strong>03 — Maîtriser</strong>
                     <span>Une méthode pour devenir progressivement autonome.</span>
                 </div>
             </div>
-    
             <div class="approach-button">
                 <a class="btn btn-primary" href="approche.html">Découvrir notre approche pédagogique</a>
             </div>
-    
         </div>
     </section>
     
@@ -347,14 +304,12 @@
                 <div class="label">À propos</div>
                 <h2>À propos du formateur</h2>
             </div>
-    
             <p style="font-size:18px; line-height:1.7; text-align:center; max-width:750px; margin:0 auto;">
                 1DFormable est porté par un formateur expérimenté, issu du terrain,
                 spécialisé en électricité, contrôle d'accès, vidéosurveillance et environnements IT.
                 Une expertise technique solide, mise au service de formations concrètes,
                 modernes et directement applicables en entreprise.
             </p>
-    
             <div style="text-align:center; margin-top:30px;">
                 <a class="btn btn-primary" href="presentation.html">Découvrir le formateur</a>
             </div>
@@ -362,26 +317,56 @@
     </section>
            
     <div id="footer"></div>
+
+    <!-- Script pour les cookies RGPD -->
+    <script>
+        // Affiche le pop-up si l'utilisateur n'a pas encore accepté
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').classList.add('show');
+            }
+        });
+        
+        // Bouton Accepter
+        document.getElementById('cookie-accept').addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').classList.remove('show');
+            loadGoogleAnalytics();
+        });
+        
+        // Bouton Refuser
+        document.getElementById('cookie-decline').addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'false');
+            document.getElementById('cookie-banner').classList.remove('show');
+        });
+        
+        // Charge Google Analytics seulement si accepté
+        function loadGoogleAnalytics() {
+            // Ajoute ton code Google Analytics ici si tu l'utilises
+        }
+    </script>
+
+    <!-- Script pour charger le footer -->
     <script>
         fetch("footer.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("footer").innerHTML = data;
-    
+                
                 // Détection de la page actuelle
                 const page = window.location.pathname.split("/").pop();
-    
+                
                 // Activation du lien correspondant avec vérification de l'existance
                 const linkMentions = document.getElementById("link-mentions");
                 if (page === "mentions-legales.html" && linkMentions) {
                     linkMentions.classList.add("active");
                 }
-    
+                
                 const linkPolitique = document.getElementById("link-politique");
                 if (page === "politique-confidentialite.html" && linkPolitique) {
                     linkPolitique.classList.add("active");
                 }
-    
+                
                 const linkConditions = document.getElementById("link-conditions");
                 if (page === "conditions-generales.html" && linkConditions) {
                     linkConditions.classList.add("active");
