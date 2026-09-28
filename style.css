@@ -149,13 +149,6 @@ a {
     margin: auto;
     padding: 85px 24px;
 }
-
-.hero h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
  
 .hero-subtitle {
     font-size: 1.4rem;
@@ -171,14 +164,21 @@ a {
 }
 
 .hero h1 {
-    font-size: clamp(38px, 5vw, 64px);
-    line-height: 1.08;
-    margin: 0 0 20px;
     max-width: 850px;
+    margin: 0 0 20px;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1px;
 }
 
 .hero h1 span {
+    display: block;
+    margin-top: 10px;
     color: var(--blue2);
+    font-size: 0.55em;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .hero p {
@@ -416,7 +416,7 @@ section {
 /* APPROACH BUTTON */
 .approach-button {
     text-align: center;
-    margin-top: 40px;   // descend le bouton
+    margin-top: 40px; /* descend le bouton */
 }
 
 .approach-button .btn {
