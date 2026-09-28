@@ -259,26 +259,36 @@
 
     <script>
         fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Impossible de charger le footer.");
+                }
+
+                return response.text();
+            })
+            .then(function(data) {
                 document.getElementById("footer").innerHTML = data;
 
                 const page = window.location.pathname.split("/").pop();
 
                 const linkMentions = document.getElementById("link-mentions");
+                const linkPolitique = document.getElementById("link-politique");
+                const linkConditions = document.getElementById("link-conditions");
+
                 if (page === "mentions-legales.html" && linkMentions) {
                     linkMentions.classList.add("active");
                 }
 
-                const linkPolitique = document.getElementById("link-politique");
                 if (page === "politique-confidentialite.html" && linkPolitique) {
                     linkPolitique.classList.add("active");
                 }
 
-                const linkConditions = document.getElementById("link-conditions");
                 if (page === "conditions-generales.html" && linkConditions) {
                     linkConditions.classList.add("active");
                 }
+            })
+            .catch(function(error) {
+                console.error(error);
             });
     </script>
     
