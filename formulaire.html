@@ -4,26 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demander un devis formation | 1DFormable</title>
-    <meta name="description" content="Demandez votre devis de formation professionnelle en informatique, bureautique, IA, BIM ou électricité. Formulaire de contact simple et rapide pour une formation sur mesure.">
+    <meta name="description" content="Demandez votre devis de formation professionnelle en informatique, bureautique, IA, BIM ou électricité. Formulaire de contact simple et rapide.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://1dformable.fr/formulaire.html">
-    
-    <!-- Open Graph -->
     <meta property="og:title" content="Demander un devis formation | 1DFormable">
     <meta property="og:description" content="Contactez-nous pour demander un devis de formation personnalisée.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://1dformable.fr/formulaire.html">
     <meta property="og:image" content="https://1dformable.fr/Logo_1DForm.jpeg">
-    
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Demander un devis formation | 1DFormable">
     <meta name="twitter:description" content="Contactez-nous pour demander un devis de formation.">
-    
     <link rel="icon" type="image/png" href="Favicon.png">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Données structurées pour un formulaire de contact -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,220 +24,44 @@
       "name": "Demander un devis formation",
       "url": "https://1dformable.fr/formulaire.html",
       "description": "Formulaire de demande de devis pour les formations professionnelles 1DFormable.",
-      "isPartOf": {
-        "@type": "EducationalOrganization",
-        "name": "1DFormable",
-        "url": "https://1dformable.fr",
-        "logo": "https://1dformable.fr/Logo_1DForm.jpeg"
-      },
-      "inLanguage": "fr-FR",
-      "potentialAction": {
-        "@type": "CommunicateAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://1dformable.fr/formulaire.html"
-        }
-      }
+      "isPartOf": {"@type":"EducationalOrganization","name":"1DFormable","url":"https://1dformable.fr","logo":"https://1dformable.fr/Logo_1DForm.jpeg"},
+      "inLanguage":"fr-FR",
+      "potentialAction":{"@type":"CommunicateAction","target":{"@type":"EntryPoint","urlTemplate":"https://1dformable.fr/formulaire.html"}}
     }
     </script>
 </head>
-
 <body>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <a class="nav-logo" href="index.html">
-                <img src="Logo_1DForm.jpeg" alt="Logo 1DFormable">
-                <span>1DFormable</span>
-            </a>
-            <div class="nav-links">
-                <a href="index.html#formations">Formations</a>
-                <a href="index.html#methode">Notre approche</a>
-                <a class="nav-cta" href="formulaire.html">Demander un devis / une formation</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-inner">
-            <h1>Demande de formation</h1>
-            <p>Remplissez ce formulaire pour obtenir un devis ou organiser une formation sur mesure.</p>
-        </div>
-    </header>
-
-    <section class="modules">
-        <div class="container">
-
-            <div class="section-title">
-                <div class="label">Formulaire</div>
-                <h2>Demande de devis / formation</h2>
-                <p>Nous vous répondrons sous 24h.</p>
-            </div>
-
-            <!-- FORMULAIRE PREMIUM -->
-            <form class="form-card fade-in" action="https://formsubmit.co/contact@1dformable.fr" method="POST">
-
-                <!-- FormSubmit options -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_subject" value="Nouvelle demande via 1DFormable">
-                <input type="hidden" name="_next" value="https://www.1dformable.fr/merci.html">
-
-                <!-- Identité -->
-                <div class="form-group">
-                    <label>Nom *</label>
-                    <input type="text" name="Nom" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Prénom *</label>
-                    <input type="text" name="Prénom" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Entreprise (optionnel)</label>
-                    <input type="text" name="Entreprise">
-                </div>
-
-                <div class="form-group">
-                    <label>Email *</label>
-                    <input type="email" name="Email" required>
-                </div>
-
-                <!-- Sujet -->
-                <div class="form-group">
-                    <label>Sujet de la demande *</label>
-                    <select name="Sujet" required>
-                        <option value="">Sélectionnez un sujet</option>
-                        <option>Demande de devis</option>
-                        <option>Demande de formation</option>
-                        <option>Renseignement sur un module</option>
-                        <option>Demande personnalisée</option>
-                        <option>Autres</option>
-                    </select>
-                </div>
-
-                <!-- Modules concernés (Checkboxes) -->
-                <div class="form-group">
-                    <label>Modules concernés *</label>
-                    <div class="chips">
-                        <label class="chip">
-                            <div class="chip-inner">
-                                <input type="checkbox" name="Modules[]" value="Informatique & systèmes">
-                                <span>Informatique & systèmes</span>
-                            </div>
-                        </label>
-
-                        <label class="chip">
-                            <div class="chip-inner">
-                                <input type="checkbox" name="Modules[]" value="Bureautique">
-                                <span>Bureautique</span>
-                            </div>
-                        </label>
-
-                        <label class="chip">
-                            <div class="chip-inner">
-                                <input type="checkbox" name="Modules[]" value="Réseaux et sécurité">
-                                <span>Réseaux et sécurité</span>
-                            </div>
-                        </label>
-
-                        <label class="chip">
-                            <div class="chip-inner">
-                                <input type="checkbox" name="Modules[]" value="Électricité et basse tension">
-                                <span>Électricité et basse tension</span>
-                            </div>
-                        </label>
-
-                        <label class="chip">
-                            <div class="chip-inner">
-                                <input type="checkbox" name="Modules[]" value="Vidéosurveillance et contrôle d'accès">
-                                <span>Vidéosurveillance et contrôle d'accès</span>
-                            </div>
-                        </label>
-
-                        <label class="chip">
-                            <div class="chip-inner">
-                                <input type="checkbox" name="Modules[]" value="BIM et FreeCAD">
-                                <span>BIM et FreeCAD</span>
-                            </div>
-                        </label>
-
-                        <label class="chip">
-                            <div class="chip-inner">
-                                <input type="checkbox" name="Modules[]" value="IA générative">
-                                <span>IA générative</span>
-                            </div>
-                        </label>
-
-                        <label class="chip">
-                            <div class="chip-inner">
-                                <input type="checkbox" name="Modules[]" value="Autres">
-                                <span>Autres</span>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Message -->
-                <div class="form-group">
-                    <label>Message (optionnel)</label>
-                    <textarea name="Message" rows="5" class="full-width"></textarea>
-                </div>
-
-                <!-- RGPD -->
-                <div class="form-group rgpd">
-                    <label class="rgpd-label">
-                        <input type="checkbox" name="rgpd" required>
-                        <span>J'accepte la politique de confidentialité et le traitement de mes données (RGPD).</span>
-                    </label>
-                </div>
-
-                <button class="btn btn-primary" type="submit">Envoyer la demande</button>
-
-            </form>
-        </div>
-    </section>
-
+    <nav class="navbar"><div class="nav-container"><a class="nav-logo" href="index.html"><img src="Logo_1DForm.jpeg" alt="Logo 1DFormable"><span>1DFormable</span></a><div class="nav-links"><a href="index.html#formations">Formations</a><a href="index.html#methode">Notre approche</a><a class="nav-cta" href="formulaire.html">Demander un devis / une formation</a></div></div></nav>
+    <header class="hero"><div class="hero-inner"><h1>Demande de formation</h1><p>Remplissez ce formulaire pour obtenir un devis ou organiser une formation sur mesure.</p></div></header>
+    <section class="modules"><div class="container"><div class="section-title"><div class="label">Formulaire</div><h2>Demande de devis / formation</h2><p>Nous vous répondrons sous 24h.</p></div>
+        <form class="form-card fade-in" action="https://formsubmit.co/contact@1dformable.fr" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Nouvelle demande via 1DFormable">
+            <input type="hidden" name="_next" value="https://www.1dformable.fr/merci.html">
+            <div class="form-group"><label>Nom *</label><input type="text" name="Nom" required></div>
+            <div class="form-group"><label>Prénom *</label><input type="text" name="Prénom" required></div>
+            <div class="form-group"><label>Entreprise (optionnel)</label><input type="text" name="Entreprise"></div>
+            <div class="form-group"><label>Email *</label><input type="email" name="Email" required></div>
+            <div class="form-group"><label>Sujet de la demande *</label><select name="Sujet" required><option value="">Sélectionnez un sujet</option><option>Demande de devis</option><option>Demande de formation</option><option>Renseignement sur un module</option><option>Demande personnalisée</option><option>Autres</option></select></div>
+            <div class="form-group"><label>Modules concernés *</label><div class="chips">
+                <label class="chip"><div class="chip-inner"><input type="checkbox" name="Modules[]" value="Informatique & systèmes"><span>Informatique & systèmes</span></div></label>
+                <label class="chip"><div class="chip-inner"><input type="checkbox" name="Modules[]" value="Bureautique"><span>Bureautique</span></div></label>
+                <label class="chip"><div class="chip-inner"><input type="checkbox" name="Modules[]" value="Réseaux et sécurité"><span>Réseaux et sécurité</span></div></label>
+                <label class="chip"><div class="chip-inner"><input type="checkbox" name="Modules[]" value="Électricité et basse tension"><span>Électricité et basse tension</span></div></label>
+                <label class="chip"><div class="chip-inner"><input type="checkbox" name="Modules[]" value="Vidéosurveillance et contrôle d'accès"><span>Vidéosurveillance et contrôle d'accès</span></div></label>
+                <label class="chip"><div class="chip-inner"><input type="checkbox" name="Modules[]" value="BIM et FreeCAD"><span>BIM et FreeCAD</span></div></label>
+                <label class="chip"><div class="chip-inner"><input type="checkbox" name="Modules[]" value="IA générative"><span>IA générative</span></div></label>
+                <label class="chip"><div class="chip-inner"><input type="checkbox" name="Modules[]" value="Autres"><span>Autres</span></div></label>
+            </div></div>
+            <div class="form-group"><label>Message (optionnel)</label><textarea name="Message" rows="5" class="full-width"></textarea></div>
+            <div class="form-group rgpd"><label class="rgpd-label"><input type="checkbox" name="rgpd" required><span>J'accepte la politique de confidentialité et le traitement de mes données (RGPD).</span></label></div>
+            <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+        </form>
+    </div></section>
     <div id="footer"></div>
-
     <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-
-                const page = window.location.pathname.split("/").pop();
-
-                const linkMentions = document.getElementById("link-mentions");
-                if (page === "mentions-legales.html" && linkMentions) {
-                    linkMentions.classList.add("active");
-                }
-
-                const linkPolitique = document.getElementById("link-politique");
-                if (page === "politique-confidentialite.html" && linkPolitique) {
-                    linkPolitique.classList.add("active");
-                }
-
-                const linkConditions = document.getElementById("link-conditions");
-                if (page === "conditions-generales.html" && linkConditions) {
-                    linkConditions.classList.add("active");
-                }
-            });
+        fetch("footer.html").then(function(response){ if(!response.ok) throw new Error("Footer non chargé"); return response.text(); }).then(function(data){ const footer=document.getElementById("footer"); if(footer) footer.innerHTML=data; const page=window.location.pathname.split("/").pop(); const linkMentions=document.getElementById("link-mentions"); const linkPolitique=document.getElementById("link-politique"); const linkConditions=document.getElementById("link-conditions"); if(page==="mentions-legales.html" && linkMentions) linkMentions.classList.add("active"); if(page==="politique-confidentialite.html" && linkPolitique) linkPolitique.classList.add("active"); if(page==="conditions-generales.html" && linkConditions) linkConditions.classList.add("active"); }).catch(function(error){ console.error(error); });
     </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (localStorage.getItem('cookiesAccepted') === 'true') {
-                // Les cookies sont acceptés : tu peux charger Google Analytics ici
-                loadGoogleAnalytics();
-            }
-        });
-
-        function loadGoogleAnalytics() {
-            // Code Google Analytics si tu l'utilises
-        }
-    </script>
-
 </body>
 </html>
