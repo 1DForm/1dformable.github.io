@@ -7,9 +7,7 @@
 
         <div>
             <span class="footer-label">Contact :</span><br>
-            <a href="mailto:contact@1dformable.fr">
-                contact@1dformable.fr
-            </a>
+            <a href="mailto:contact@1dformable.fr">contact@1dformable.fr</a>
 
             <br><br>
 
@@ -46,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const targetId = links[page];
     if (targetId) {
         const el = document.getElementById(targetId);
-        if (el) el.classList.add("active");
+        if (el) {
+            el.classList.add("active");
+        }
     }
 });
 </script>
