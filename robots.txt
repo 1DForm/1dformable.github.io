@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /formulaire.html
-Disallow: /merci.html
-Disallow: /admin/
 
 Sitemap: https://1dformable.fr/sitemap.xml
 
@@ -13,3 +10,6 @@ Allow: /
 # Bing
 User-agent: Bingbot
 Allow: /
+
+# Respecte les crawl budgets
+Crawl-delay: 1
