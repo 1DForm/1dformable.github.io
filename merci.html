@@ -7,129 +7,23 @@
     <meta name="description" content="Merci d'avoir soumis votre demande de formation. Nous vous contactons sous peu pour discuter de vos besoins.">
     <meta name="robots" content="noindex,follow">
     <link rel="canonical" href="https://1dformable.fr/merci.html">
-    
-    <!-- Open Graph -->
     <meta property="og:title" content="Merci pour votre demande | 1DFormable">
     <meta property="og:description" content="Nous vous remercions. Vous recevrez bientôt une réponse.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://1dformable.fr/merci.html">
     <meta property="og:image" content="https://1dformable.fr/Logo_1DForm.jpeg">
-    
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    
     <link rel="icon" type="image/png" href="Favicon.png">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Données structurées pour une page de confirmation -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Confirmation de demande",
-      "url": "https://1dformable.fr/merci.html",
-      "description": "Page de confirmation après soumission d'une demande de formation.",
-      "isPartOf": {
-        "@type": "Organization",
-        "name": "1DFormable",
-        "url": "https://1dformable.fr",
-        "logo": "https://1dformable.fr/Logo_1DForm.jpeg"
-      },
-      "inLanguage": "fr-FR"
-    }
-    </script>
+    <script type="application/ld+json">{ "@context":"https://schema.org","@type":"WebPage","name":"Confirmation de demande","url":"https://1dformable.fr/merci.html","description":"Page de confirmation après soumission d'une demande de formation.","isPartOf":{"@type":"Organization","name":"1DFormable","url":"https://1dformable.fr","logo":"https://1dformable.fr/Logo_1DForm.jpeg"},"inLanguage":"fr-FR" }</script>
 </head>
-
 <body>
-
-<nav class="navbar">
-    <div class="nav-container">
-        <a class="nav-logo" href="index.html">
-            <img src="Logo_1DForm.jpeg" alt="Logo 1DFormable">
-            <span>1DFormable</span>
-        </a>
-        <div class="nav-links">
-            <a href="index.html#formations">Formations</a>
-            <a href="index.html#methode">Notre approche</a>
-            <a class="nav-cta" href="formulaire.html">Demander un devis / une formation</a>
-        </div>
-    </div>
-</nav>
-
-<header class="hero">
-    <div class="hero-inner">
-        <h1>Merci pour votre demande</h1>
-        <p>Votre message a bien été envoyé. Nous vous répondrons sous 24 heures.</p>
-    </div>
-</header>
-
-<section class="modules">
-    <div class="container">
-
-        <div class="module-card fade-in" style="max-width:600px; margin:auto; text-align:center;">
-            <h3>Votre demande a été prise en compte</h3>
-            <p class="module-desc">
-                Nous avons bien reçu votre demande de formation ou de devis.<br>
-                Un formateur 1DFormable vous contactera rapidement.
-            </p>
-
-            <a class="btn btn-primary" href="index.html">Retour à l’accueil</a>
-            <br><br>
-            <a class="btn btn-secondary" href="formations.html">Voir les formations</a>
-        </div>
-
-    </div>
-</section>
-
+    <nav class="navbar"><div class="nav-container"><a class="nav-logo" href="index.html"><img src="Logo_1DForm.jpeg" alt="Logo 1DFormable"><span>1DFormable</span></a><div class="nav-links"><a href="index.html#formations">Formations</a><a href="index.html#methode">Notre approche</a><a class="nav-cta" href="formulaire.html">Demander un devis / une formation</a></div></div></nav>
+    <header class="hero"><div class="hero-inner"><h1>Merci pour votre demande</h1><p>Votre message a bien été envoyé. Nous vous répondrons sous 24 heures.</p></div></header>
+    <section class="modules"><div class="container"><div class="module-card fade-in" style="max-width:600px; margin:auto; text-align:center;"><h3>Votre demande a été prise en compte</h3><p class="module-desc">Nous avons bien reçu votre demande de formation ou de devis.<br>Un formateur 1DFormable vous contactera rapidement.</p><a class="btn btn-primary" href="index.html">Retour à l’accueil</a><br><br><a class="btn btn-secondary" href="formations.html">Voir les formations</a></div></div></section>
     <div id="footer"></div>
-
     <script>
-        fetch("footer.html")
-            .then(function(response) {
-                if (!response.ok) {
-                    throw new Error("Impossible de charger le footer.");
-                }
-
-                return response.text();
-            })
-            .then(function(data) {
-                document.getElementById("footer").innerHTML = data;
-
-                const page = window.location.pathname.split("/").pop();
-
-                const linkMentions = document.getElementById("link-mentions");
-                const linkPolitique = document.getElementById("link-politique");
-                const linkConditions = document.getElementById("link-conditions");
-
-                if (page === "mentions-legales.html" && linkMentions) {
-                    linkMentions.classList.add("active");
-                }
-
-                if (page === "politique-confidentialite.html" && linkPolitique) {
-                    linkPolitique.classList.add("active");
-                }
-
-                if (page === "conditions-generales.html" && linkConditions) {
-                    linkConditions.classList.add("active");
-                }
-            })
-            .catch(function(error) {
-                console.error(error);
-            });
+        fetch("footer.html").then(function(response){ if(!response.ok) throw new Error("Footer non chargé"); return response.text(); }).then(function(data){ const footer=document.getElementById("footer"); if(footer) footer.innerHTML=data; const page=window.location.pathname.split("/").pop(); const linkMentions=document.getElementById("link-mentions"); const linkPolitique=document.getElementById("link-politique"); const linkConditions=document.getElementById("link-conditions"); if(page==="mentions-legales.html" && linkMentions) linkMentions.classList.add("active"); if(page==="politique-confidentialite.html" && linkPolitique) linkPolitique.classList.add("active"); if(page==="conditions-generales.html" && linkConditions) linkConditions.classList.add("active"); }).catch(function(error){ console.error(error); });
     </script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        if (localStorage.getItem('cookiesAccepted') === 'true') {
-            // Les cookies sont acceptés : tu peux charger Google Analytics ici
-            loadGoogleAnalytics();
-        }
-    });
-    
-    function loadGoogleAnalytics() {
-        // Code Google Analytics si tu l'utilises
-    }
-</script>
-
 </body>
 </html>
