@@ -4,49 +4,33 @@
             <div class="footer-brand">1DFormable</div>
             <div>Apprendre. Pratiquer. Maîtriser.</div>
         </div>
-
         <div>
             <span class="footer-label">Contact :</span><br>
             <a href="mailto:contact@1dformable.fr">contact@1dformable.fr</a>
-
             <br><br>
-
             <span class="footer-label">LinkedIn :</span><br>
-            <a href="https://www.linkedin.com/company/1dformable"
-               target="_blank"
-               rel="noopener noreferrer">
-                1DFormable
-            </a>
+            <a href="https://www.linkedin.com/company/1dformable" target="_blank" rel="noopener noreferrer">1DFormable</a>
         </div>
-
         <div class="footer-links">
             <a id="link-mentions" href="mentions-legales.html">Mentions légales</a>
             <a id="link-politique" href="politique-confidentialite.html">Politique de confidentialité</a>
             <a id="link-conditions" href="conditions-generales.html">Conditions générales</a>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        © 2026 1DFormable. Tous droits réservés.
-    </div>
+    <div class="footer-bottom">© 2026 1DFormable. Tous droits réservés.</div>
 </footer>
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const page = window.location.pathname.split("/").pop();
-
     const links = {
         "mentions-legales.html": "link-mentions",
         "politique-confidentialite.html": "link-politique",
         "conditions-generales.html": "link-conditions"
     };
-
     const targetId = links[page];
     if (targetId) {
         const el = document.getElementById(targetId);
-        if (el) {
-            el.classList.add("active");
-        }
+        if (el) el.classList.add("active");
     }
 });
 </script>
