@@ -10,6 +10,3 @@ Allow: /
 # Bing
 User-agent: Bingbot
 Allow: /
-
-# Respecte les crawl budgets
-Crawl-delay: 1
