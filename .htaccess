@@ -20,12 +20,20 @@
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 
-# Redirect HTTP to HTTPS
+# Redirect HTTP to HTTPS & Force non-www (ou harmonisation)
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Remove .html extension
+# 1. Rediriger proprement /index.html vers la racine / (Évite les pages en double)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# 2. Forcer le domaine principal sans les www (si votre domaine canonique est 1dformable.fr)
+RewriteCond %{HTTP_HOST} ^www\.1dformable\.fr [NC]
+RewriteRule ^(.*)$ https://1dformable.fr/$1 [L,R=301]
+
+# Masquer l'extension .html pour les autres pages (ex: /informatique au lieu de /informatique.html)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
